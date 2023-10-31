@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1%; 
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.page-wrapper {
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  justify-content: start;
+  height: auto;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 25% 50% 25%;
+  grid-template-columns: 
+  "page-section about"
+  "work heroGrid"
+  "page-section-contact contact";*/
+
+}
+
+#page-section {
+  grid-area: page-section;
+}
+
+#about {
+  grid-area: about;
+}
+
+#page-section-contact {
+  grid-area: page-section-contact;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+#work {
+  grid-area: work;
+}
+
+#heroGrid {  
+  grid-area: heroGrid;
+  margin: 50px 5%;
+  display: grid;
+  column-gap: 100px;
+  gap: 20px;
+  min-height: auto;
+  height: auto;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 
+  "project1 project1" 
+  "project2 project3"
+  "project4 project5";
+}
+
+
+#project1 {
+  grid-area: project1;
+  background-image: url("./images/02-portfolio-1.jpg");
+  flex-grow: 1;
+}
+
+#project2 {
+  grid-area: project2;
+  background-image: url("./images/02-portfolio-2.jpg");
+}
+
+#project3 {
+  grid-area: project3;
+  background-image: url("./images/02-portfolio-3.jpg");
+}
+
+#project4 {
+  grid-area: project4;
+  background-image: url("./images/02-portfolio-4.jpg");
+}
+
+#project5 {
+  grid-area: project5;
+  background-image: url("./images/02-run-buddy.jpg");
+}
+
+#projectTitle {
+  font-stretch: expanded;
+  margin: auto;
+  color: aliceblue;
+}
+
+/*#headline {
+  border: 5px solid #FF6200;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  right: -50px;
+  top: 100px;
+  padding: 25px;
+  max-width: 550px;
+  z-index: 100
+}*/
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+}
+
+h1,
+h2 {
+  font-size: 60px;
+  margin: 0px 0%;
+}
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+}
